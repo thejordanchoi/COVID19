@@ -29,27 +29,33 @@
         <!--Map-->
         <scene sceneID="RlA-Mm-WIz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTr-Nm-X0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="f49-v0-idh" customClass="MapViewController" customModule="COVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Loy-dt-y6x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ijf-3T-mUu">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pHx-x4-Vcx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f49-v0-idh" id="jZn-wD-zPw"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ijf-3T-mUu" firstAttribute="top" secondItem="Loy-dt-y6x" secondAttribute="top" id="155-rC-Fgh"/>
-                            <constraint firstItem="Ijf-3T-mUu" firstAttribute="bottom" secondItem="Loy-dt-y6x" secondAttribute="bottom" id="7nL-8o-0nh"/>
-                            <constraint firstItem="Ijf-3T-mUu" firstAttribute="leading" secondItem="Loy-dt-y6x" secondAttribute="leading" id="VEN-qc-Nmz"/>
-                            <constraint firstItem="Ijf-3T-mUu" firstAttribute="trailing" secondItem="Loy-dt-y6x" secondAttribute="trailing" id="rC0-Xd-6ke"/>
+                            <constraint firstItem="pHx-x4-Vcx" firstAttribute="trailing" secondItem="Loy-dt-y6x" secondAttribute="trailing" id="9r9-Pr-068"/>
+                            <constraint firstItem="pHx-x4-Vcx" firstAttribute="bottom" secondItem="Loy-dt-y6x" secondAttribute="bottom" id="ODP-4F-Etk"/>
+                            <constraint firstItem="pHx-x4-Vcx" firstAttribute="leading" secondItem="Loy-dt-y6x" secondAttribute="leading" id="i6m-9G-UYq"/>
+                            <constraint firstItem="pHx-x4-Vcx" firstAttribute="top" secondItem="Loy-dt-y6x" secondAttribute="top" id="ysh-5I-JPj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YJ4-ar-dq2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="globe" id="wba-Ar-8ak"/>
+                    <connections>
+                        <outlet property="mapView" destination="pHx-x4-Vcx" id="uZc-7I-FdC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qTr-Nm-X0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2497" y="44"/>
         </scene>
