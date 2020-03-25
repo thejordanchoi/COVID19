@@ -18,6 +18,13 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+        
+        let statWindow = UIApplication.shared.value(forKey:"statusBarWindow") as! UIView
+        let statusBar = statWindow.subviews[0] as UIView
+        let blurEffect = UIBlurEffect(style: .regular) // .extraLight or .dark
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = statusBar.frame
+        view.addSubview(blurEffectView)
     }
     
     
