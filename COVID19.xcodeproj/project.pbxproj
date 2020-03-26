@@ -11,7 +11,7 @@
 		B3AA39B7242337FB00C66B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AA39B5242337FB00C66B59 /* Main.storyboard */; };
 		B3AA39B9242337FD00C66B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3AA39B8242337FD00C66B59 /* Assets.xcassets */; };
 		B3AA39BC242337FD00C66B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AA39BA242337FD00C66B59 /* LaunchScreen.storyboard */; };
-		B3EF8276242C12E4005E5817 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EF8275242C12E4005E5817 /* MapViewController.swift */; };
+		B3ED0816242C5CD900A5CB54 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED0815242C5CD900A5CB54 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		B3AA39B8242337FD00C66B59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3AA39BB242337FD00C66B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3AA39BD242337FD00C66B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3EF8275242C12E4005E5817 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B3ED0815242C5CD900A5CB54 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 				B3AA39B8242337FD00C66B59 /* Assets.xcassets */,
 				B3AA39BA242337FD00C66B59 /* LaunchScreen.storyboard */,
 				B3AA39BD242337FD00C66B59 /* Info.plist */,
-				B3EF8275242C12E4005E5817 /* MapViewController.swift */,
+				B3ED0815242C5CD900A5CB54 /* MapViewController.swift */,
 			);
 			path = COVID19;
 			sourceTree = "<group>";
@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					B3AA39AD242337FB00C66B59 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -136,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3AA39B2242337FB00C66B59 /* AppDelegate.swift in Sources */,
-				B3EF8276242C12E4005E5817 /* MapViewController.swift in Sources */,
+				B3ED0816242C5CD900A5CB54 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +292,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thejordanchoi.COVID19;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,7 +310,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thejordanchoi.COVID19;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

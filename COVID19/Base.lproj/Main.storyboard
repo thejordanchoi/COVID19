@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iaD-Tf-SNn">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iaD-Tf-SNn">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,33 +27,33 @@
         <!--Map-->
         <scene sceneID="RlA-Mm-WIz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qTr-Nm-X0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="f49-v0-idh" customClass="MapViewController" customModule="COVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Loy-dt-y6x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pHx-x4-Vcx">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2E-tw-bwy">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <connections>
-                                    <outlet property="delegate" destination="f49-v0-idh" id="jZn-wD-zPw"/>
+                                    <outlet property="delegate" destination="f49-v0-idh" id="asL-AH-IBE"/>
                                 </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="pHx-x4-Vcx" firstAttribute="trailing" secondItem="Loy-dt-y6x" secondAttribute="trailing" id="9r9-Pr-068"/>
-                            <constraint firstItem="pHx-x4-Vcx" firstAttribute="bottom" secondItem="Loy-dt-y6x" secondAttribute="bottom" id="ODP-4F-Etk"/>
-                            <constraint firstItem="pHx-x4-Vcx" firstAttribute="leading" secondItem="Loy-dt-y6x" secondAttribute="leading" id="i6m-9G-UYq"/>
-                            <constraint firstItem="pHx-x4-Vcx" firstAttribute="top" secondItem="Loy-dt-y6x" secondAttribute="top" id="ysh-5I-JPj"/>
+                            <constraint firstItem="B2E-tw-bwy" firstAttribute="trailing" secondItem="Loy-dt-y6x" secondAttribute="trailing" id="5Th-No-hRB"/>
+                            <constraint firstItem="B2E-tw-bwy" firstAttribute="top" secondItem="Loy-dt-y6x" secondAttribute="top" id="XfD-q5-qcc"/>
+                            <constraint firstItem="B2E-tw-bwy" firstAttribute="leading" secondItem="Loy-dt-y6x" secondAttribute="leading" id="e0Y-kd-4yk"/>
+                            <constraint firstItem="B2E-tw-bwy" firstAttribute="bottom" secondItem="Loy-dt-y6x" secondAttribute="bottom" id="tud-MK-Uae"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YJ4-ar-dq2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="globe" id="wba-Ar-8ak"/>
                     <connections>
-                        <outlet property="mapView" destination="pHx-x4-Vcx" id="uZc-7I-FdC"/>
+                        <outlet property="mapView" destination="B2E-tw-bwy" id="09e-JG-ZzA"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTr-Nm-X0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2497" y="44"/>
         </scene>
