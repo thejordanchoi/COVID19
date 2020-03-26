@@ -60,10 +60,14 @@ class MapViewController: UIViewController {
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
+            break
         case .restricted:
             // Show an alert letting them know what's up
             break
         case .authorizedAlways:
+            mapView.showsUserLocation = true
+            centerViewOnUserLocation()
+            locationManager.startUpdatingLocation()
             break
         @unknown default:
             fatalError("checkLocationAuthorization error.")
@@ -73,12 +77,6 @@ class MapViewController: UIViewController {
 
 
 extension MapViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let location = locations.last else { return }
-//        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-//        mapView.setRegion(region, animated: true)
-    }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
